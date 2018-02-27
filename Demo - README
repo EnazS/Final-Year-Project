@@ -1,0 +1,16 @@
+Download dataset from:
+
+https://www.kaggle.com/djonafegnem/chicago-crime-data-analysis/data
+
+Get the Chicago_Crimes_2012_to_2017.csv
+
+
+Install packages
+	- pandas
+	- seaborn
+	- matplotlib
+	
+Compiling takes some time.
+Multiple graphs are obtained.
+
+	
