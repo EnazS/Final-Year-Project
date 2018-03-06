@@ -2,8 +2,7 @@
 
 import pandas as pd
 from pandas import read_csv
-import pickle
-crimes = read_csv("/home/zanesx/Desktop/Datasets/Datasets for Demo/Chicago_Crimes_2012_to_2017.csv", index_col='Date')
+crimes = read_csv("/home/zanesx/Desktop/CrimeRateInferenceWithBigData-master/Datasets for Chicago/Chicago_Crimes_2012_to_2017.csv", index_col='Date')
 
 print(type(crimes))
 
@@ -12,7 +11,7 @@ crimes.head()
 
 crimes.index = pd.to_datetime(crimes.index)
 
-print(crimes.shape)
+# print(crimes.shape)
 print(crimes.head())
 
 s = crimes[['Primary Type']]
@@ -26,19 +25,19 @@ import matplotlib.pyplot as plt
 sns.set(style="whitegrid")
 
 # Initialize the matplotlib figure
-f, ax = plt.subplots(figsize=(4, 15))
+# f, ax = plt.subplots(figsize=(4, 15))
 
 # Plot the Number of crimes
 sns.set_color_codes("pastel")
-sns.barplot(x="counts", y="Primary Type", data=crime_count.iloc[:10, :],
-            label="Total", color="b")
+sns.barplot(x="counts", y="Primary Type", data=crime_count.iloc[:10, :],label="Total", color="b")
 
-ax.legend(ncol=2, loc="lower right", frameon=True)
-ax.set(ylabel="Type of Crime",
-       xlabel="Number of Crimes")
-sns.despine(bottom=True, left=True)
-
+# ax.legend(ncol=2, loc="lower right", frameon=True)
+# ax.set(ylabel="Type of Crime", xlabel="Number of Crimes")
+# sns.despine(bottom=True, left=True)
 # Add a legend and informative axis label
+plt.title('Total Crimes')
+plt.ylabel('Type of Crime')
+plt.xlabel('Number of Crimes')
 plt.show()
 
 # Arrests
@@ -52,25 +51,32 @@ crimes_2017 = crimes.loc['2017']
 # Yearly crimes
 arrest_yearly = crimes[crimes['Arrest'] == True]['Arrest']
 plt.subplot()
-
 # yearly arrest
 arrest_yearly.resample('A').sum().plot()
 plt.title('Yearly arrests')
+plt.ylabel('Number of Arrests')
+plt.xlabel('Year')
 plt.show()
 
 # Monthly arrest
 arrest_yearly.resample('M').sum().plot()
 plt.title('Monthly arrests')
+plt.ylabel('Number of Arrests')
+plt.xlabel('Month')
 plt.show()
 
 # Weekly arrest
 arrest_yearly.resample('W').sum().plot()
 plt.title('Weekly arrests')
+plt.ylabel('Number of Arrests')
+plt.xlabel('Week')
 plt.show()
 
 # daily arrest
 arrest_yearly.resample('D').sum().plot()
 plt.title('Daily arrests')
+plt.ylabel('Number of Arrests')
+plt.xlabel('Year')
 plt.show()
 plt.show()
 
@@ -98,20 +104,30 @@ data_2016 = grouper_2016['Primary Type'].count().unstack()
 
 data_2012.plot()
 plt.title("Top 5 monthly crimes in 2012")
+plt.ylabel('Number of Crimes')
+plt.xlabel('Month')
 plt.show()
 
 data_2013.plot()
 plt.title("Top 5 monthly crimes in 2013")
+plt.ylabel('Number of Crimes')
+plt.xlabel('Month')
 plt.show()
 
 data_2014.plot()
 plt.title("Top 5 monthly crimes 2014")
+plt.ylabel('Number of Crimes')
+plt.xlabel('Month')
 plt.show()
 
 data_2015.plot()
 plt.title("Top 5 monthly crimes 2015")
+plt.ylabel('Number of Crimes')
+plt.xlabel('Month')
 plt.show()
 
 data_2016.plot()
 plt.title("Top 5 monthly crimes 2016")
+plt.ylabel('Number of Crimes')
+plt.xlabel('Month')
 plt.show()
