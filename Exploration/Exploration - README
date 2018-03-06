@@ -1,6 +1,6 @@
 Download dataset from:
 
-https://www.kaggle.com/djonafegnem/chicago-crime-data-analysis/data
+https://www.kaggle.com/currie32/crimes-in-chicago/data
 
 Get the Chicago_Crimes_2012_to_2017.csv
 
@@ -11,6 +11,4 @@ Install packages
 	- matplotlib
 	
 Compiling takes some time.
-Multiple graphs are obtained.
-
-note : use python2 while executing 	
+Multiple graphs are obtained.	
