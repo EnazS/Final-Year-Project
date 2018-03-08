@@ -36,15 +36,18 @@ for row in reader_demo:
 print(y)
 y = np.asarray(y, dtype=np.float)
 #prints the float matrix
-
+new_y = np.round(y, decimals=3)
 #print(y)
 
 #now plot communties vs crime rate
 
 plt.ylim(0,0.5)
 plt.xlim(1,77)
+
 plt.xlabel('Communities')
 plt.ylabel('Rate')
-plt.plot(x,y)
+plt.plot(x,y,"-o")
+for i, txt in enumerate(new_y):
+    plt.annotate(txt, (x[i],y[i]))
 plt.show()
 
