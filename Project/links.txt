@@ -1,5 +1,4 @@
-Geographic : https://data.cityofchicago.org/Facilities-
-Geographic-Boundaries/Boundaries-Community-Areas-current-/cauq-8yn6/data
+Geographic : https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas-current-/cauq-8yn6/data
 
 Demographic : http://www.census.gov.
 
